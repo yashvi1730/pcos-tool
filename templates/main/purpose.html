@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/purpose1.css'%}">
+
+    <link rel="stylesheet" href="{% static 'css/header1.css'%}">
+    <link rel="stylesheet" href="{% static 'css/footer2.css'%}">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface" />
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+   
+</head>
+<body >
+
+  <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=421275845044457&autoLogAppEvents=1" nonce="RC3YhEcm"></script>
+
+    <nav class="navbar navbar-expand-md navbar-light " >
+        <a href="http://www.proactiveforher.com/" class="navbar-brand" style="color: white;font-family: Abril Fatface;">Proactive</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" >
+            <span class="navbar-toggler-icon" style="background-color: white;"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse " id="navbarCollapse">
+            <div class="navbar-nav"  >
+               
+                <a href="http://www.proactiveforher.com/" class="nav-item nav-link active" style="padding-right: 40px;color: white;">Home</a>
+                <a href="http://www.proactiveforher.com/webinar/" class="nav-item nav-link" style="padding-right: 40px;color: white;">Webinars</a>
+                <a href="http://www.proactiveforher.com/videos/" class="nav-item nav-link" style="padding-right: 40px;color: white;">Videos</a>
+                <a href="http://www.proactiveforher.com/blog/" class="nav-item nav-link" style="padding-right: 40px;color: white;"> Blog</a>
+                <a href="http://www.proactiveforher.com/sti-2/patient-education-tools/" class="nav-item nav-link" style="padding-right: 40px;color: white;">Tools</a>
+                <a href="http://www.proactiveforher.com/forum/" class="nav-item nav-link" style="padding-right: 40px;color: white;">Forum</a>
+                <a href="http://www.proactiveforher.com/doctors/" class="nav-item nav-link" style="padding-right: 40px;color: white;">Physicians</a>
+           
+            </div>
+        </div>
+      </nav>
+    <br/>
+    <br/>
+    <div class="container" >
+      <br/>
+        <ul class="progressbar">
+            <li class="active"><b>Personal Information</b></li>
+            <li class="active"><b>PCOS History</b></li>
+            <li class="active"><b>Medical History</b></li>
+            <li class="active"><b>Menstrual History</b></li>
+            <li class="active"><b>Purpose of call</b></li>
+            <li><b>Schedule Call</b></li>
+    
+          </ul>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+        <form method="POST" enctype="multipart/form-data"> 
+            {% csrf_token %}
+            
+
+            <h1 style=" font-family: Montserrat;" id="heading">Purpose of Visit</h1>
+            <div class="row">
+                <p style=" margin-left:40px;font-family: Open Sans;">Fill in the below information to help the doctor understand your concerns</p>
+            </div>
+            <br/>
+
+            <div class="row" style="margin-bottom: -20px;">
+                <p style=" margin-left:40px">What is the purpose of Scheduling the appointment with the doctor</p>
+
+            </div>
+            
+            <div class="row" style="margin-bottom: -30px;">
+                <div class="col-1" style="margin:auto">
+                    <input type="radio"  id="purpose" name="purpose" value="Current Treatment does not seem effective" ></input>
+                </div>
+                <div class="col-11" style="margin:auto">
+                <label for="purpose" > Current Treatment does not seem effective</label>
+              </div>
+            </div>
+
+            <div class="row" style="margin-bottom: -30px;">
+                <div class="col-1" style="margin:auto">
+                    <input type="radio" id="purpose" name="purpose" value=" Want to change the current treatment" ></input>
+                </div>
+                <div class="col-11" style="margin:auto">
+               <label for="purpose" > Want to change the current treatment </label>
+              </div>
+            </div>
+
+            <div class="row" style="margin-bottom: -30px;">
+                <div class="col-1" style="margin:auto">
+                    <input type="radio" id="purpose" name="purpose" value="Symptoms have worsened"></input>
+                </div>
+                <div class="col-11" style="margin:auto">
+                <label for="purpose"> Symptoms have worsened</label>
+              </div>
+            </div>
+
+            <div class="row" style="margin-bottom: -30px;">
+                <div class="col-1"  style="margin:auto">
+                    <input type="radio" id="purpose" name="purpose" value="New Symptoms have emerged related to PCOS" ></input>
+                </div>
+                <div class="col-11" style="margin:auto">
+                 <label for="purpose" > New Symptoms have emerged related to PCOS</label>
+              </div>
+            </div>
+
+            <div class="row" style="margin-bottom: -30px;">
+                <div class="col-1" style="margin:auto">
+                    <input type="radio" id="purpose" name="purpose" value="Need Second opinion"></input>
+                </div>
+                <div class="col-11" style="margin:auto">
+                 <label for="purpose" > Need Second opinion</label>
+              </div>
+            </div>
+            <hr/>
+
+
+             <br/>
+
+            <div class="row" style="margin-left: 15px;">
+                <div class="col-4">
+                     <label for="add_reason"> Please elaborate or provide additional details for reason of visit</label>
+                </div>
+                <div class="col-8">
+                    <textarea row="3" type="text" id="add_reason" name="add_reason" required style="height:120px"></textarea>
+                </div>
+              </div>
+              <hr/>
+
+              <br/>
+              <div class="row">
+                <p style=" margin-left:40px">Upload any reports/related documents</p>
+              </div>
+
+              <div class="row" style="margin-left: 15px;">
+                <div class="col-4">
+                     <label for="docfile">Choose File</label>
+                </div>
+                <div class="col-8">
+                    <input type="file" id="docfile" name="docfile"  style="height:120px"></input>
+                </div>
+              </div>
+             
+            <br/>
+
+              <div class="row">
+                <input  type="submit" value="Continue">
+            </div>
+            <br/>
+            
+
+        </form>
+    </div>
+    <div>
+      <h1  id="comment" style="text-align: center;">Comment</h1>
+      
+  </div>
+  <div id="comment1">Share anything you would like to say.</div>
+  <br/>
+  <div  class="row" id="f_1">
+    <p>
+  <div   class="fb-comments" data-href="http://52.15.219.209:8000/homepage/" data-numposts="100" data-width=""></div></p>
+  </div>
+
+
+  <footer>
+    <div  style=" background: #163948; padding:30px">
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-6" >
+            
+                <a href="http://www.proactiveforher.com/" id="f_2"> Home</a>
+                <br/>
+                <a href="https://www.facebook.com/proactiveforher/?__tn__=%2Cd%2CP-R&eid=ARBOEZQG5jk8MqVy1_dkE5SWe1aZh6iVRJ4CNfc2AlW_d4oKslHdFP1TOpa1LqHGK7eKHdarQEhFmfjz" class="fa fa-facebook"></a> &nbsp;
+                <a href="https://www.instagram.com/proactiveforher/?hl=en" class="fa fa-instagram"></a> &nbsp;
+                <a href="https://www.linkedin.com/company/43208504/admin/" class="fa fa-linkedin"></a> &nbsp;
+
+                <br/>
+                <p id="f_3">© Proactive For Her 2020</p>
+
+            </div>
+            <div class="col-6">
+                <form method="POST" action="https://proactiveforher.us18.list-manage.com/subscribe/post?u=14fbc27b9ee1cfe7f204242de&amp;id=792a773110">
+                {% csrf_token %}
+                    <input id="f_email"  type="f_email" name="f_email" Placeholder="Your email address">
+                    <br/>
+                    
+                <button type="submit" id="f_submit">Signup for Newsletter</button>
+                </form>
+            </div>
+            </div>
+             </div>
+</footer>
+    
+    
+</body>
+</html>
+

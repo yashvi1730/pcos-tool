@@ -1,0 +1,58 @@
+.container {
+    background-color:white;
+    border-color: #163948 ;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 7px;
+   
+    color:#163948;
+    font-family: lora;
+  }
+
+  .col-60 {
+    
+    width: 25%;
+    margin-top: 6px;
+    margin-left:270px;
+  }
+  
+.col-40 {
+    
+    width: 20%;
+    margin-top: 6px;
+    margin-left:500 px;
+    
+  }
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+#img {
+    margin-left: 400px;
+}
+
+#heading {
+    margin-left: 420px;
+}
+
+#heading2 {
+    margin-left: 200px;
+}
+
+@media only screen and (max-width: 500px) {
+    #img {
+        margin-left: 0px;
+    }
+
+    #heading2 {
+        margin-left: 0px;
+    }
+
+    #heading {
+        margin-left: 20px;
+    }
+}

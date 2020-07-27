@@ -1,0 +1,144 @@
+
+  
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color:#163948;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left:500px;
+    font-size: larger;
+    
+    width:15%;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    background-color:white;
+    border-color: #163948 ;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 7px;
+    
+    color:#163948;
+    font-family:lora;
+  }
+  
+  .col-60 {
+    
+    width: 25%;
+    margin-top: 6px;
+    margin-left:270px;
+  }
+  
+  .col-40 {
+    
+    width: 20%;
+    margin-top: 6px;
+    margin-left:500 px;
+    
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .progressbar{
+    counter-reset:step;
+  }
+
+  .progressbar li{
+    list-style-type:none;
+    float:left;
+    width:16.66%;
+    position:relative;
+    text-align: center;
+   }
+  .progressbar li:before{
+    content:counter(step);
+    counter-increment:step;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    display: block;
+    text-align: center;
+    margin:0 auto 10px auto;
+    border-radius: 50%;
+    
+  }
+
+  .progressbar li:after {
+    content:'';
+    position: absolute;
+    width:100%;
+    height: 1px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+  }
+
+  .progressbar li:first-child:after{
+    content: none;
+  }
+
+  .progressbar li.active{
+    color: green;
+  }
+
+  .progressbar li.active:before{
+    border-color: green;
+    
+  }
+ 
+h1 {
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        background-color:white;
+        border-color: #163948 ;
+        border-style: solid;
+        border-radius: 20px;
+        border-width: 7px;
+        
+        color:#163948;
+        font-family:lora;
+        width: 600px;
+      }
+
+      input[type=submit] {
+        background-color:#163948;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left:250px;
+        font-size: larger;
+        
+        width:20%;
+      }
+}

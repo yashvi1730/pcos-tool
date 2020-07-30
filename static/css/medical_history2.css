@@ -39,7 +39,8 @@ input, select, textarea {
     border-width: 7px;
     text-align:center;
     color:#163948;
-    font-family:lora;
+    font-family:open sans;
+    font-size: large;
   }
   
   .col-60 {

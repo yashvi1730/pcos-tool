@@ -12,10 +12,14 @@ def form_view(request):
     if request.method == 'POST':
         form =PatientForm(request.POST)
         if form.is_valid():
+            print("valid")
             form.save()
-        return redirect('/pcos_history')
-    form_f=FooterForm()
+            return redirect('/pcos_history')
+    
+        else:
+            print("invalid")
 
+    form_f=FooterForm()
     context={
         "form":form,
         "form_f":form_f
@@ -84,7 +88,7 @@ def purpose_form(request):
         form4 =Purpose_of_visitForm(request.POST,request.FILES)
         if form4.is_valid():
             form4.save()
-        return redirect('/schedule')
+        return redirect('/lastpage')
     form4_f=FooterForm()
 
     context={

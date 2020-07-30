@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/medical_history1.css'%}">
-    <link rel="stylesheet" href="{% static 'css/header1.css'%}">
-    <link rel="stylesheet" href="{% static 'css/footer2.css'%}">
+    <link rel="stylesheet" href="{% static 'css/medical_history2.css'%}">
+    <link rel="stylesheet" href="{% static 'css/header_h.css'%}">
+    <link rel="stylesheet" href="{% static 'css/footer_h.css'%}">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
@@ -26,11 +26,8 @@
 </head>
 <body >
 
-  <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=421275845044457&autoLogAppEvents=1" nonce="RC3YhEcm"></script>
-
   <nav class="navbar navbar-expand-md navbar-light " >
-    <a href="http://www.proactiveforher.com/" class="navbar-brand" style="color: white;font-family: Abril Fatface;">Proactive</a>
+    <a href="http://www.proactiveforher.com/" class="navbar-brand" style="color: white;font-family: Abril Fatface;" id="logo" >Proactive</a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" >
         <span class="navbar-toggler-icon" style="background-color: white;"></span>
     </button>
@@ -38,17 +35,17 @@
     <div class="collapse navbar-collapse " id="navbarCollapse">
         <div class="navbar-nav"  >
            
-            <a href="http://www.proactiveforher.com/" class="nav-item nav-link active" style="padding-right: 40px;color: white;">Home</a>
-            <a href="http://www.proactiveforher.com/webinar/" class="nav-item nav-link" style="padding-right: 40px;color: white;">Webinars</a>
-            <a href="http://www.proactiveforher.com/videos/" class="nav-item nav-link" style="padding-right: 40px;color: white;">Videos</a>
-            <a href="http://www.proactiveforher.com/blog/" class="nav-item nav-link" style="padding-right: 40px;color: white;"> Blog</a>
-            <a href="http://www.proactiveforher.com/sti-2/patient-education-tools/" class="nav-item nav-link" style="padding-right: 40px;color: white;">Tools</a>
-            <a href="http://www.proactiveforher.com/forum/" class="nav-item nav-link" style="padding-right: 40px;color: white;">Forum</a>
-            <a href="http://www.proactiveforher.com/doctors/" class="nav-item nav-link" style="padding-right: 40px;color: white;">Physicians</a>
+            <a href="http://www.proactiveforher.com/" class="nav-item nav-link active" style="padding-right: 25px;color: white;">Home</a>
+            <a href="http://www.proactiveforher.com/webinar/" class="nav-item nav-link" style="padding-right: 25px;color: white;">Webinars</a>
+            <a href="http://www.proactiveforher.com/videos/" class="nav-item nav-link" style="padding-right: 25px;color: white;">Videos</a>
+            <a href="http://www.proactiveforher.com/blog/" class="nav-item nav-link" style="padding-right: 25px;color: white;"> Blog</a>
+            <a href="http://www.proactiveforher.com/sti-2/patient-education-tools/" class="nav-item nav-link" style="padding-right: 25px;color: white;">Tools</a>
+            <a href="http://www.proactiveforher.com/forum/" class="nav-item nav-link" style="padding-right: 25px;color: white;">Forum</a>
+            <a href="http://www.proactiveforher.com/doctors/" class="nav-item nav-link" style="padding-right: 25px;color: white;">Physicians</a>
        
         </div>
     </div>
-  </nav>
+</nav>
 <br/>
 <br/>
     <div class="container" >
@@ -60,7 +57,7 @@
             <li class="active"><b>Medical History</b></li>
             <li><b>Menstrual History</b></li>
             <li><b>Purpose of call</b></li>
-            <li><b>Schedule Call</b></li>
+            <li><b>Completed</b></li>
     
           </ul>
           <br/>
@@ -70,7 +67,7 @@
           <br/>
         <form method="POST">
             {% csrf_token %}
-            <h1 style="color:#163948 ;">Medical History</h1>
+            <h1 style="color:#163948 ;font-family: Montserrat;"><b>Medical History</b></h1>
 
         <br/>
         <br/>
@@ -81,7 +78,7 @@
             <label for="pcos_medication"> List down the medications you are on for PCOS</label>
           </div>
           <div class="col-8">
-          <textarea rows="3" style="padding-left: 0px;padding-top: 0px;height: 150px;" type="text" id="pcos_medication" name="pcos_medication"  required style="height:120px"></textarea>
+          <textarea rows="3" style="padding-left: 0px;padding-top: 0px;height: 150px;" type="text" id="pcos_medication" name="pcos_medication"  style="height:120px"></textarea>
         </div>
         </div>
 
@@ -94,7 +91,7 @@
                 <label for="other_medication"> List down any other medication you are on</label>
             </div>
             <div class="col-8">
-                <textarea  rows="3"  style="padding-left: 0px;padding-top: 0px;height: 150px;" type="text" id="other_medication" name="other_medication"  required style="height:120px"></textarea>
+                <textarea  rows="3"  style="padding-left: 0px;padding-top: 0px;height: 150px;" type="text" id="other_medication" name="other_medication"  style="height:120px"></textarea>
           </div>
         </div>
 
@@ -107,7 +104,7 @@
                 <label for="allergies"> List down your allergies </label>
             </div>
             <div class="col-8">
-                <textarea   rows="3" style="padding-left: 0px;padding-top: 0px;height: 150px;" type="text" id="allergies" name="allergies" required style="height:120px"></textarea>
+                <textarea   rows="3" style="padding-left: 0px;padding-top: 0px;height: 150px;" type="text" id="allergies" name="allergies"  style="height:120px"></textarea>
           </div>
           </div>
 
@@ -120,48 +117,45 @@
         </form>
     </div>
     <br/>
+    <br/>
 
-    <div>
-      <h1  id="comment">Comment</h1>
+    <footer >
+      <div  style=" background: #163948; padding:30px">
+          <br/>
+         
+          <div class="row">
+              <div class="col-6" >
+              
+                  <a href="http://www.proactiveforher.com/" style="color: white;" id="f_home"> Home</a>
+                  <br/>
+                  <div id="social">
+                  <a style="font-size: large;" href="https://www.facebook.com/proactiveforher/?__tn__=%2Cd%2CP-R&eid=ARBOEZQG5jk8MqVy1_dkE5SWe1aZh6iVRJ4CNfc2AlW_d4oKslHdFP1TOpa1LqHGK7eKHdarQEhFmfjz" class="fa fa-facebook"></a> &nbsp;
+                  <a style="font-size: large;" href="https://www.instagram.com/proactiveforher/?hl=en" class="fa fa-instagram"></a> &nbsp;
+                  <a style="font-size: large;" href="https://www.linkedin.com/company/43208504/admin/" class="fa fa-linkedin"></a> &nbsp;
+              </div>
+  
+                 
+                  <p style="color: white;" id="f_logo">© Proactive For Her 2020</p>
+  
+              </div>
+              <div class="col-6">
+                  <form method="POST" action="https://proactiveforher.us18.list-manage.com/subscribe/post?u=14fbc27b9ee1cfe7f204242de&amp;id=792a773110">
+                  {% csrf_token %}
+                      <input style="height: 30px;" type="email" name="f_email" id="f_email" Placeholder="Your email address">
+                      <br/>
+                      
+                  <button type="submit" id="f_submit">Signup for Newsletter</button>
+                  </form>
+              </div>
+              </div>
+              
+             
+             
+  
+      </div>
       
-  </div>
-  <div id="comment1">Share anything you would like to say.</div>
-  <br/>
-  <div  class="row" id="f_1">
-    <p>
-  <div   class="fb-comments" data-href="http://52.15.219.209:8000/homepage/" data-numposts="100" data-width=""></div></p>
-  </div>
-    
+  </footer>
 
-  <footer>
-    <div  style=" background: #163948; padding:30px">
-        <br/>
-        <br/>
-        <div class="row">
-            <div class="col-6" >
-            
-                <a href="http://www.proactiveforher.com/" id="f_2"> Home</a>
-                <br/>
-                <a href="https://www.facebook.com/proactiveforher/?__tn__=%2Cd%2CP-R&eid=ARBOEZQG5jk8MqVy1_dkE5SWe1aZh6iVRJ4CNfc2AlW_d4oKslHdFP1TOpa1LqHGK7eKHdarQEhFmfjz" class="fa fa-facebook"></a> &nbsp;
-                <a href="https://www.instagram.com/proactiveforher/?hl=en" class="fa fa-instagram"></a> &nbsp;
-                <a href="https://www.linkedin.com/company/43208504/admin/" class="fa fa-linkedin"></a> &nbsp;
-
-                <br/>
-                <p id="f_3">© Proactive For Her 2020</p>
-
-            </div>
-            <div class="col-6">
-                <form method="POST" action="https://proactiveforher.us18.list-manage.com/subscribe/post?u=14fbc27b9ee1cfe7f204242de&amp;id=792a773110">
-                {% csrf_token %}
-                    <input id="f_email"  type="f_email" name="f_email" Placeholder="Your email address">
-                    <br/>
-                    
-                <button type="submit" id="f_submit">Signup for Newsletter</button>
-                </form>
-            </div>
-            </div>
-             </div>
-</footer>
-    
+           
 </body>
 </html>

@@ -1,5 +1,5 @@
 
-
+  
 input, select, textarea {
     width: 100%;
     padding: 12px;
@@ -36,9 +36,10 @@ input, select, textarea {
     border-style: solid;
     border-radius: 20px;
     border-width: 7px;
-   
-    color:#163948;
-    font-family:lora;
+    
+    color:#54595F;
+    font-family:open sans;
+    font-size: large;
   }
   
   .col-60 {
@@ -65,6 +66,7 @@ input, select, textarea {
 
   .progressbar{
     counter-reset:step;
+    color: #163948;
   }
 
   .progressbar li{
@@ -110,58 +112,13 @@ input, select, textarea {
     border-color: green;
     
   }
-
-  #r_1 {
-      margin-left: 190px;
-  }
-
-  #r_2 {
-    margin-left: 200px;
-}
-
-#r_3 {
-    margin-left: 50px;
-}
-
-#r_4 {
-    margin-left: 230px;
-}
-
-#r_5 {
-    margin-left: 300px;
-}
-
-#r_6 {
-    margin-left: 335px;
-}
-
+ 
 h1 {
-     text-align: center;
-}
-
-h3 {
+    font-family: "Montserrat";
     text-align: center;
 }
 
-
-
-#c3 {
-   margin-left: 2px;
-}
-
-#c4 {
-    margin-left: 2px;
-}
-
-#c5 {
-    margin-left: 5px;
-}
-
-#c1_5 {
-    margin-left: 60px;
-}
-
-  @media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     .container {
         background-color:white;
         border-color: #163948 ;
@@ -172,7 +129,6 @@ h3 {
         color:#163948;
         font-family:lora;
         width: 600px;
-       
       }
 
       input[type=submit] {
@@ -187,53 +143,4 @@ h3 {
         
         width:20%;
       }
-
-      #r_1 {
-        margin-left: 0px;
-    }
-
-    #r_2 {
-        margin-left: 0px;
-    }
-
-    #r_3 {
-        margin-left: 0px;
-    }
-
-    #r_4 {
-        margin-left: 0px;
-    }
-
-    #r_5 {
-        margin-left: 0px;
-    }
-
-    #r_6 {
-        margin-left: 40px;
-    }
-
-    #c1_5 {
-        margin-left: 45px;
-    }
-    #ex {
-        margin-left: -50px;
-    }
-
-   
-    
-    #c2 {
-       margin-left: 10px;
-    }
-    
-    #c3 {
-       margin-left: 2px;
-    }
-    
-    #c4 {
-        margin-left: 2px;
-    }
-    
-    #c5 {
-        margin-left: 5px;
-    }
-}  
+}

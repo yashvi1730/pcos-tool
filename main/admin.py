@@ -3,7 +3,7 @@ from main.models import Patient,Medical_History,Schedule,Pcos_History,Purpose_of
 
 # Register your models here.
 class PatientAdmin(admin.ModelAdmin):
-    list_display=['name','age','city','number','email','weight','height_feet','height_inches']
+    list_display=['name','age','email','weight','height_feet','height_inches']
 
 class Medical_HistoryAdmin(admin.ModelAdmin):
     list_display=[ 'pcos_medication','other_medication','allergies']

@@ -3,13 +3,12 @@ from django.db import models
 
 class Patient(models.Model):
     name=models.CharField(max_length=100)
-    age=models.CharField(max_length=5)
-    city=models.CharField(max_length=100)
-    number=models.CharField(max_length=15)
+    age=models.IntegerField(default=None,null=True,blank=True)
+   
     email=models.EmailField()
-    weight=models.CharField(max_length=5)
-    height_feet=models.CharField(max_length=5,default='none')
-    height_inches=models.CharField(max_length=5,default='none')
+    weight=models.CharField(max_length=5,default=None,null=True,blank=True)
+    height_feet=models.CharField(max_length=5,default=None,null=True,blank=True)
+    height_inches=models.CharField(max_length=5,default=None,null=True,blank=True)
 
 class Medical_History(models.Model):
     pcos_medication=models.CharField(max_length=1000)

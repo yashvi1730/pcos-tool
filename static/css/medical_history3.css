@@ -118,6 +118,12 @@ h1 {
     color: #163948;
 }
 
+#title {
+    font-family: Montserrat;
+    text-align:center;
+    color:#163948;
+    border-color: white;
+}
 
 @media only screen and (max-width: 500px) {
          

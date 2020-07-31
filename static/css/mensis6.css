@@ -163,6 +163,13 @@ h3 {
     margin-left: 60px;
 }
 
+#title {
+    font-family: Montserrat;
+    text-align:center;
+    color:#163948;
+    border-color: white;
+}
+
   @media only screen and (max-width: 500px) {
     .container {
         background-color:white;

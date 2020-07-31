@@ -1,3 +1,5 @@
+
+  
 input, select, textarea {
     width: 100%;
     padding: 12px;
@@ -6,12 +8,12 @@ input, select, textarea {
     resize: vertical;
   }
   
-label {
+  label {
     padding: 12px 12px 12px 0;
     display: inline-block;
   }
   
-input[type=submit] {
+  input[type=submit] {
     background-color:#163948;
     color: white;
     padding: 12px 20px;
@@ -24,32 +26,30 @@ input[type=submit] {
     width:15%;
   }
   
-input[type=submit]:hover {
+  input[type=submit]:hover {
     background-color: #45a049;
   }
-
-
   
-.container {
+  .container {
     background-color:white;
     border-color: #163948 ;
     border-style: solid;
     border-radius: 20px;
     border-width: 7px;
-    text-align:center;
-    color:#163948;
+    
+    color:#54595F;
     font-family:open sans;
     font-size: large;
   }
   
-.col-60 {
+  .col-60 {
     
     width: 25%;
     margin-top: 6px;
     margin-left:270px;
   }
   
-.col-40 {
+  .col-40 {
     
     width: 20%;
     margin-top: 6px;
@@ -58,22 +58,15 @@ input[type=submit]:hover {
   }
   
   /* Clear floats after the columns */
-.row:after {
+  .row:after {
     content: "";
     display: table;
     clear: both;
   }
 
-#cont{
-    background-color:white;
-    color:black
-}
-
-
-
-.progressbar{
+  .progressbar{
     counter-reset:step;
-    font-family: open sans;
+    color: #163948;
   }
 
   .progressbar li{
@@ -112,20 +105,26 @@ input[type=submit]:hover {
   }
 
   .progressbar li.active{
-    color:green;
+    color: green;
   }
 
   .progressbar li.active:before{
     border-color: green;
     
   }
-
+ 
 h1 {
-    font-family: Montserrat;
-    color: #163948;
-   
+    font-family: "Montserrat";
+    text-align: center;
 }
-  
+
+#title {
+    font-family: Montserrat;
+    text-align:center;
+    color:#163948;
+    border-color: white;
+}
+
 @media only screen and (max-width: 500px) {
     .container {
         background-color:white;
@@ -133,22 +132,10 @@ h1 {
         border-style: solid;
         border-radius: 20px;
         border-width: 7px;
+        
+        color:#163948;
+        font-family:lora;
         width: 600px;
-      }
-
-      .col-60 {
-    
-        width: 25%;
-        margin-top: 6px;
-        margin-left:150px;
-      }
-      
-    .col-40 {
-        
-        width: 20%;
-        margin-top: 6px;
-        margin-left:500 px;
-        
       }
 
       input[type=submit] {
@@ -164,4 +151,3 @@ h1 {
         width:20%;
       }
 }
-

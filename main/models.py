@@ -23,7 +23,7 @@ class Schedule(models.Model):
 
 
 class Pcos_History(models.Model):
-    pcos_diagnosed_age= models.CharField( max_length=128,default='less than 20')
+    pcos_diagnosed_age= models.CharField( max_length=128,default='less than 20',null=True,blank=True)
     acne=models.CharField(max_length=100,default='not_correct',null=True,blank=True)
     excess_hair_growth=models.CharField(max_length=100,default='not_correct',null=True,blank=True)
     irr_period=models.CharField(max_length=100,default='not_correct',null=True,blank=True)
